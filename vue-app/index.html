@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrations Résonances</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.prod.js"></script>
+</head>
+<body>
+  <div id="app"><header-component></header-component><router-view></router-view></div>
+
+  <!-- Templates -->
+  <script type="text/x-template" id="header-template">
+<header>
+  <nav>
+    <button class="burger-menu" aria-label="Menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+    <ul class="nav-menu">
+      <router-link to="/" tag="a">
+        <img src="images/blanc.png" alt="Retour à l'accueil" class="back-button">
+      </router-link>
+      <li><router-link to="/" active-class="active">Accueil</router-link></li>
+      <li><router-link to="/activite" active-class="active">Activité</router-link></li>
+      <li><router-link to="/photos" active-class="active">Photos</router-link></li>
+      <li><router-link to="/interventions" active-class="active">Interventions</router-link></li>
+      <li><router-link to="/formation" active-class="active">Transmission</router-link></li>
+      <li><router-link to="/experiences" active-class="active">Expériences</router-link></li>
+      <li><router-link to="/parcours" active-class="active">Parcours</router-link></li>
+      <li><router-link to="/temoignages" active-class="active">Témoignages</router-link></li>
+      <li><router-link to="/instruments" active-class="active">Instruments</router-link></li>
+      <li><router-link to="/contact" active-class="active">Contact</router-link></li>
+    </ul>
+  </nav>
+  <div class="logo-container">
+    <div class="logo-left">
+      <img src="images/logos/adapeila.png" alt="Logo Adapeila">
+    </div>
+    <h1 class="main-title">Vibrations Résonances</h1>
+    <button class="audio-control" id="playButton" aria-label="Jouer la musique"></button>
+  </div>
+</header>
+  </script>
+
+  <!-- Page templates will be inserted here -->
+  <script type="text/x-template" id="activite-template">
+<audio id="pageAudio" src="audio/voix.mp3" preload="auto"></audio>
+    <main>
+        <section class="activity-content">
+            <h1>L'activité Vibrations Résonances</h1>
+            
+            <div class="activity-header-image">
+                <img src="images/carillon.jpeg" alt="Carillon utilisé lors des activités">
+            </div>
+
+            <div class="activity-text">
+                <p>Dans cette activité, les participants découvrent des instruments, baignent dans des résonances instrumentales et vocales, développent une écoute personnelle et une écoute collective.</p>
+
+                <p>Les participants sont sollicités et encouragés à créer des échanges sonores les uns avec les autres. Dans un deuxième temps, les créations d'ambiance sonore peuvent aussi s'enrichir de mots et d'histoires, selon le degré de handicap : mots articulés ou langage parlé.</p>
+
+                <div class="highlight-box">
+                    <p>Les neurosciences nous apprennent aujourd'hui que le champ vibratoire est 29 fois supérieur au langage parlé ; c'est pourquoi les résonances des instruments et des voix, deviennent des langages plus intéressants à développer auprès des personnes différentes.</p>
+                </div>
+
+                <h2>Une aventure musicale en résonances…</h2>
+
+                <p>Accompagné par des instruments de percussions et lames sonores, cymbales, cymbalines et surtout de la voix parlée et chantée, il s'agit de proposer aux participants des stimulations sonores, des vibrations, des résonances, des gestes, des mouvements, des déplacements, tout un chemin vibratoire qui va nous permettre d'entrer en résonance ensemble.</p>
+
+                <p>En partant du silence… amener progressivement un autre son, un autre rythme, une autre couleur musicale, laisser se superposer les éléments sonores, les intégrer dans une sorte de voyage où chacun trouve sa place dans l'envie, le désir, le besoin. Sachant que les vibrations sonores dans l'espace opèrent toujours un changement interne chez les participants, laisser s'ajouter un petit morceau de soi pour enrichir, volontairement ou involontairement, la création sonore de l'instant.</p>
+
+                <h2>L'écoute comme point de départ</h2>
+                <p>Pour conduire cette démarche, il est nécessaire de considérer l'écoute de chacun avec les autres comme point de départ de l'aventure. Je parle ici pour les personnes déjà capables d'apporter mécaniquement et émotionnellement quelques sons et rythmes à la matière sonore qui s'élabore. Pour les personnes ne pouvant agir directement sur un instrument, l'approche n'est pas fondamentalement différente puisqu'en les baignant dans des sons et de la voix, il s'agit de les inclure comme élément vibratoire de la musique qui se vit dans l'instant. C'est-à-dire les inclure dans les résonances pour essayer – avec beaucoup de modestié - d'aller à la rencontre de leur chemin intérieur par l'écoute, la présence, les vibrations qui sonnent.</p>
+
+                <p>Tous les signes de chacun que je peux percevoir sont à intégrer dans cette aventure. Chacune de leurs réactions devient un élément, matière à un prolongement sonore, voire un développement qui me permet d'aller chercher - parfois d'atteindre et de rejoindre, même de façon infinitésimale - un des chemins émotionnels de leur Être essentiel.</p>
+
+                <div class="example-box">
+                    <h3>Exemples concrets</h3>
+                    <p>Par exemple, quand Simon arrête sa parole, je reprends vocalement son babil chanté, je le suis dans ses déplacements, je lui amène des couleurs sonores près de ses oreilles en faisant résonner cymbales, cymbalines, lames sonores … pour Jean-Pierre, je joue avec son verre, sa voix, ses cris comme un matériau sonore vivant … avec Jérôme, j'intègre le souffle sonore de sa flûte à tout moment, je joue avec les rencontres instrumentales – cymbales, flûte – en y mettant du jeu corporel, du rire, du sourire, tout langage non verbal ...</p>
+                </div>
+
+                <p>C'est une aventure conduite au fur et à mesure mais qui garde un côté aléatoire, en mouvement constant, toujours en construction, et qui reste tellement fragile, ténue, qu'une intrusion subite de quelqu'un dans le lieu par exemple, pourrait en briser le flux ... tant ce voyage conserve tout le long un caractère fugitif et éphémère.</p>
+
+                <h2>Le rôle des éducateurs</h2>
+                <p>Pour les éducateurs qui m'accompagnent, je leur demande de vivre cette activité comme participant au présent d'un univers sonore qui va se jouer. Qu'ils deviennent un corps sonore en présence, au même titre que les autres participants, en évitant une relation d'aide privilégiée de personne à personne.</p>
+
+                <p>En effet, je souhaite que l'idée de relation éducateur-résidant tombe au profit d'une relation musicale exclusivement. C'est pour cette raison que je demande que la personne qui m'assiste dans ce travail ne prenne pas d'initiative, se laisse conduire avec bienveillance et disponibilité, reste seulement en présence d'écoute active, ne cherchant pas à aider, mais uniquement à rejoindre la musique et le champ vibratoire qui se créent, oubliant sa fonction éducative tant que le comportement d'un ou plusieurs résidants ne nécessite pas une vigilance plus accrue.</p>
+
+                <h2>Une approche unique</h2>
+                <p>J'essaie de faire comprendre que faire pour faire ne présente aucun intérêt dans cette aventure musicale. Mais plutôt accepter la nécessité de se fondre dans un chemin vibratoire par une écoute intérieure, de mettre au service de l'aventure, pas tant ses qualités d'éducateur que sa sensibilité propre d'individu mêlé à d'autres individualités, au profit d'une aventure musicale qui s'installe.</p>
+
+                <div class="highlight-box">
+                    <p>La notion d'apprentissage et de répétition n'a pas sa place dans cette démarche. Elle peut même être préjudiciable à la proposition initiale. C'est au contraire un espace de liberté où seules les sensations et émotions, invitées par les vibrations et résonances, tracent un chemin sur l'instant.</p>
+                </div>
+
+                <p>Et il se renouvelle sans cesse pour le plaisir d'une nouvelle page vierge à écrire, sans valise dans chaque main, comme dirait Jacques Brel dans les Timides, c'est-à-dire léger, sans bagage, sans encombrement. (Par contre, on sait que l'oreille a sa propre mémoire ...)</p>
+
+                <p>Je fais simplement exister sur l'instant un monde sonore que j'invite à laisser surgir. Je laisse la mémoire sensorielle (auditive et émotionnelle) agir seule, elle existe de toute façon, indépendamment de notre volonté, et je la vérifie à chaque fois auprès des résidants quand une évolution apparaît, prouvant que toutes les aventures précédentes se sont inscrites quelque part.</p>
+
+                <div class="quote-box">
+                    <p>Quand on sait que l'oreille a sa propre mémoire, que toute notre vie est inscrite dans cette mémoire, consciemment et inconsciemment (cf A.Tomatis), il ne reste plus qu'à la réveiller. Les vibrations et les résonances agissent comme des stimuli extraordinaires sur cette mémoire sensorielle. Et c'est à elle que je fais appel.</p>
+                </div>
+
+                <p>À chaque fois, la notion d'inventer en partant de l'écoute extrême du groupe et de chaque individu, est indispensable pour ne pas devenir le répétiteur issu d'une volonté d'apprentissage.</p>
+            </div>
+            
+            <div class="instruments-link">
+                <router-link to="/instruments" class="btn-link">Découvrir les instruments →</router-link>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="contact-template">
+<audio id="pageAudio" src="audio/chimes.mp3" preload="auto"></audio>
+    <main>
+        <section class="contact-content">
+            <h1>Contactez-moi</h1>
+            
+            <div class="contact-intro">
+                <p>Pour toute demande d'information sur l'activité Vibrations Résonances ou pour envisager des interventions dans votre établissement, n'hésitez pas à me contacter.</p>
+            </div>
+
+            <div class="contact-info">
+                <h2>Pascal IOCHUM</h2>
+                <p class="phone">Téléphone : 06 74 51 11 25</p>
+                <p class="region">vibrations.resonances@gmail.com</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqapagly" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="experiences-template">
+<audio id="pageAudio" src="audio/home.mp3" preload="auto"></audio>
+    <main>
+        <section class="experiences-content">
+                        <div class="experiences-list">
+                <div class="poetic-experience">
+                    <h2>L'ÊTRE OUVERT(E) D'UN MONDE A L'AUTRE</h2>
+                    <h3>THIERRY</h3>
+                    <div class="poetic-text">
+                        <p>Comme sur un fil tendu à l'extrême les yeux perçants le vide… coulé à terre les bras droits fixés au sol, les doigts collés sur les carreaux de faïence, il écoute, il entend, il ressent…</p>
+
+                        <p>Parfois un grand sourire éclaire ses lèvres, un grand sourire composé par les yeux et la bouche…et soudain il touche une cymbale, recommence, prend dans sa main à peine ouverte la baguette que je lui tends, la garde un moment, et la laisse choir au sol aussi tranquillement que son corps se détend.</p>
+
+                        <p>Lui si rassemblé tout à l'heure semble se disloquer en plusieurs… et puis il prend son temps, recolle un à un les morceaux... revient vers son fauteuil qu'il semble prendre d'assaut comme un château fort !</p>
+
+                        <p>Plus tard, il revient vers la voix, le son, le mouvement, les vibrations.</p>
+
+                        <p>Il y a une connivence vibratoire avec Eric, une sensation de partage, un fil invisible de téléphonie invisible.</p>
+
+                        <p>Dans un autre endroit des choses il y a des silences qui parlent comme des brouhahas…..</p>
+
+                        <p>et puis peut-être il mettra sa couverture sur lui et se rendormira.</p>
+                    </div>
+                </div>
+                <div class="experience-buttons">
+                    <button class="exp-btn" data-experience="carmen">Carmen</button>
+                    <button class="exp-btn" data-experience="brigitte">Brigitte</button>
+                    <button class="exp-btn" data-experience="estitxu">ESTITXU</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modale Carmen -->
+    <div class="experience-modal" id="carmenModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeCarmenModal">&times;</button>
+            <h2 class="modal-title">RAPPORT D'ACTIVITÉ</h2>
+            <div class="modal-text">
+                <p>Atelier Vibrations et Résonnances<br>
+                Pascal Iochum</p>
+                <h3>CARMEN</h3>
+                <p>Quand j'arrive aujourd'hui Carmen me voit, me ressent et d'une certaine manière me fait « la fête ». Elle est contente d'être là.</p>
+                <p>Sa nervosité, (morsure sur les mains) s'atténue et dès que ma voix résonne, elle entre dans le son, demande du rythme, accepte de me laisser mettre un tambourin sur elle et jouer dessus avec des baguettes.</p>
+                <p>Elle cherche à prendre, toucher, est sensible à tous les sons que je percute sur les roues de son fauteuil.</p>
+                <p>Son chant vibratoire s'accentue et se révèle de plus en plus ouvert. Elle est sensible aux cymbales, à la voix et à tous les mouvements que je fais autour d'elle.</p>
+                <p>Je suis content pour elle d'avoir pu la garder car son visage aujourd'hui montre des traits plus doux et souvent plus différenciés qu'au début.</p>
+                <p>Elle se sent bien dans ce groupe.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Brigitte -->
+    <div class="experience-modal" id="brigitteModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeBrigitteModal">&times;</button>
+            <h2 class="modal-title">Atelier « Aventures et Résonnances »</h2>
+            <div class="modal-text">
+                <h3>BRIGITTE</h3>
+                <p>Dans un premier temps, BRIGITTE est resté assez loin de moi à l'écoute des sons et de la voix.</p>
+                <p>Puis peu à peu elle s'est approchée jusqu'à même se coucher près de moi, ou est restée à genoux et à laisser son visage «monter au ciel » pour mieux ressentir, boire les sons ; tranquille, sereine, en réception maximum</p>
+                <p>Je commence à communiquer avec elle par des frappes de baguettes sur le sol…..elle prend les baguettes, les lâche sur le sol, s'amuse des sons et du jeu relationnel.</p>
+                <p>Elle s'est apprivoisée peu à peu à son rythme, manifestant toujours de l'intérêt ; son «être» est en relation avec son environnement.</p>
+                <p>Son évolution avec moi et le groupe, est en progression</p>
+                <p>Sa place dans l'atelier « aventures et résonnances» me semble souhaitable et importante</p>
+                <p style="margin-top: 2rem;">7 décembre 2007<br>Pascal Iochum</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale ESTITXU -->
+    <div class="experience-modal" id="estitxuModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeEstitxuModal">&times;</button>
+            <h2 class="modal-title">Vibrations et résonnances</h2>
+            <div class="modal-text">
+                <p>Pascal Iochum</p>
+                <h3>ESTITXU</h3>
+                <p>La plupart des séances, elle marche, elle écoute, frappe dans ses mains, danse avec moi, recherche les sons, les vibrations, les résonnances, aime beaucoup la voix aigüe, s'arrête, se pose.</p>
+                <p>Parfois elle se couche, il lui arrive aussi d'émettre quelques sons de manière répétitive en suivant un rythme simple que j'ai pu faire juste avant.</p>
+                <p>Elle ressent le monde vibratoire, les sons, les mouvements comme une seconde peau, elle baigne dans l'énergie des sons.</p>
+                <p>Elle ne joue pas d'instruments, elle ne fait pas quelque chose, elle est immergée entièrement dans les vibrations sonores avec délice. Elle se sent apaisée.</p>
+                <p>A noter aussi, que sa présence produit chez Clément une rassurance, une sorte de douceur tranquille qui semble autoriser Clément à être bien.</p>
+                <p>L'interaction, le partage d'énergie entre ces deux êtres, leur apporte une sorte de tendresse mutuelle.</p>
+                <p>La continuité de l'aventure est pour l'un comme pour l'autre un réel mieux être.</p>
+            </div>
+        </div>
+    </div>
+
+    
+        document.querySelector('[data-experience="carmen"]').addEventListener('click', function() {
+            document.getElementById('carmenModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('closeCarmenModal').addEventListener('click', function() {
+            document.getElementById('carmenModal').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.getElementById('carmenModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.querySelector('[data-experience="brigitte"]').addEventListener('click', function() {
+            document.getElementById('brigitteModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('closeBrigitteModal').addEventListener('click', function() {
+            document.getElementById('brigitteModal').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.getElementById('brigitteModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.querySelector('[data-experience="estitxu"]').addEventListener('click', function() {
+            document.getElementById('estitxuModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('closeEstitxuModal').addEventListener('click', function() {
+            document.getElementById('estitxuModal').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.getElementById('estitxuModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="formation-template">
+<audio id="pageAudio" src="audio/voix.mp3" preload="auto"></audio>
+    <main>
+        <section class="formation-content">
+                        <div class="formation-text">
+                <div class="formation-intro">
+                    <h2>Transmission d'expérience pour l'activité artistique "Vibrations Résonances"</h2>
+
+                </div>
+
+                <div class="formation-objectives">
+                    <h3>Objectifs</h3>
+                    <p>Permettre aux participants l'acquisition des principes de base de la méthode « vibrations et résonances » pour initier à leur tour en structure un atelier avec des résidents lourdement handicapés.</p>
+                </div>
+
+                <div class="formation-content-details">
+                    <h3>Contenu théorique</h3>
+                    <ul>
+                        <li>Accueil des résidents</li>
+                        <li>Ressentir chaque individu d'un groupe</li>
+                        <li>Initiation vocale</li>
+                        <li>Rudiments de percussions</li>
+                        <li>Vibrations et résonances</li>
+                        <li>Rythmes et utilisations sonores</li>
+                        <li>Échanges de pratiques artistiques et sur la pratique en ateliers</li>
+                    </ul>
+
+                    <h3>Contenu pratique</h3>
+                    <ul>
+                        <li>Reconnaître le silence</li>
+                        <li>Stimulation progressive</li>
+                        <li>Mise en relation sonore des résidents</li>
+                        <li>Ce qu'il faut faire et ne pas faire</li>
+                        <li>Communication non verbale</li>
+                        <li>Éviter la relation d'aide</li>
+                        <li>Ne pas être dans l'apprentissage</li>
+                        <li>Progresser vers l'artistique</li>
+                        <li>S'approprier la méthode</li>
+                        <li>Trouver sa personnalité d'intervenant artistique</li>
+                        <li>Maîtriser les outils instrumentaux et vocaux</li>
+                        <li>Prise en main progressive de l'atelier</li>
+                        <li>Débuter et clore une séance</li>
+                    </ul>
+                </div>
+
+                <div class="formation-immersion">
+                    <h3>Immersion pratique</h3>
+                    <p>Le travail de transmission est actuellement en cours à la Maison d'accueil spécialisée l'Epeau à Bouguenais auprès de professionnels de l'établissement.</p>
+                </div>
+
+                <div class="formation-trainer">
+                    <h3>Formateur</h3>
+                    <p>Pascal IOCHUM, Créateur de l'activité "VIBRATIONS RESONANCES"<br>
+                    (Activité artistique, musicale, vocale, gestuelle de créations sonores éphémères)</p>
+                    <p>Musicien, comédien, chanteur, spécialiste en pédagogie vocale, intervenant en structures spécialisées au service des personnes différentes, autistes, handicapées depuis plus de 30 ans.</p>
+                    <p class="cv-note"><router-link to="/parcours">CV et parcours professionnel</router-link></p>
+                </div>
+
+                <div class="formation-contact">
+                    <h3>Contact et informations</h3>
+                    <p>Si vous souhaitez que Pascal IOCHUM intervienne éventuellement dans votre institution et/ou si vous souhaitez envisager un protocole de TRANSMISSION, vous pouvez le contacter au :</p>
+                    <p class="phone-number">06 74 51 11 25</p>
+                </div>
+
+                <div class="formation-note">
+                    <p>D'autres modules de formation peuvent être envisagés en fonction de votre institution.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="instruments-template">
+<audio id="pageAudio" src="audio/chimes.mp3" preload="auto"></audio>
+    <main>
+        <section class="instruments-content">
+            <h1>Les instruments sonores</h1>
+            <div class="instruments-intro text-center">
+                <p class="instruments-subtitle">Des cymbales, des lames sonores, balafon, des clochettes, des petites percussions, synthétiseurs, bongo et roto tom….</p>
+            </div>
+
+            <div class="instruments-grid text-center">
+                <article class="instrument-card" data-sound="cymbale">
+                    <img src="images/instruments/cymbale.jpeg" alt="Cymbale">
+                    <div class="instrument-info">
+                        <h2>Les cymbales</h2>
+                        <p>La cymbale est un instrument de musique de la famille des percussions idiophones, consistant en un disque de métal généralement percé en son centre. Il est confectionné selon différents procédés. Vibrations sonores puissantes aux Résonances métalliques.</p>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-sound="lames">
+                    <img src="images/instruments/lames.jpeg" alt="Lames sonores">
+                    <div class="instrument-info">
+                        <h2>Les lames sonores</h2>
+                        <p>Du xylophone au balafon en passant par le carillon, les lames sonores offrent une grande variété de timbres et de résonances.</p>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-sound="bongo">
+                    <img src="images/instruments/bongo.jpeg" alt="Bongo">
+                    <div class="instrument-info">
+                        <h2>Le bongo</h2>
+                        <p>Le bongo ou bongó est un instrument à percussion de Cuba qui s'est répandu dans toute la musique latine. C'est une paire de tambours solidaires, à une membrane chacun et dont l'un est plus grand que l'autre.</p>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-sound="rototom">
+                    <img src="images/instruments/rototom.jpeg" alt="Rototom">
+                    <div class="instrument-info">
+                        <h2>Le rototom</h2>
+                        <p>Tambour sans fût dont on peut faire varier la hauteur en tournant la peau, le rototom offre des possibilités de résonances uniques.</p>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-sound="clochettes">
+                    <img src="images/instruments/clochettes.jpeg" alt="Clochettes">
+                    <div class="instrument-info">
+                        <h2>Les clochettes</h2>
+                        <p>Les clochettes créent des sonorités cristallines qui apportent brillance et légèreté aux explorations sonores.</p>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-sound="percussions">
+                    <img src="images/instruments/percussions.jpeg" alt="Petites percussions">
+                    <div class="instrument-info">
+                        <h2>Les petites percussions</h2>
+                        <p>Une variété d'instruments permettant d'enrichir la palette sonore et d'offrir différentes textures de résonances.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="instruments-note text-center">
+                <p>Tous ces instruments sont choisis et utilisés pour leurs qualités vibratoires spécifiques. Ils permettent de créer un environnement sonore riche et varié, propice à l'exploration et à l'expression.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="interventions-template">
+<audio id="pageAudio" src="audio/chimes.mp3" preload="auto"></audio>
+    <main>
+        <section class="intervention-content">
+            <div class="intervention-header">
+                <div class="intervention-text">
+                    <h1>Les interventions</h1>
+                    <p>Les interventions Vibrations et Résonances s'adressent aux institutions spécialisées hébergeant des personnes lourdement handicapées, différentes et/ou autistes.</p>
+                    <p>Pascal IOCHUM, Artiste chanteur-percussionniste-comédien-conteur, Auteur et Intervenant principal, est au service de ces personnes depuis plus de 25 ans.</p>
+                </div>
+                <div class="intervention-image">
+                    <img src="images/chimes.jpeg" alt="Carillons musicaux">
+                </div>
+            </div>
+        </section>
+
+        <section class="intervention-content additional-text">
+            <div class="text-wrapper">
+                <p>C'est l'expérience de toutes ces années de partage en tant qu'Artiste avec des enfants, des adultes et en institutions spécialisées qui ont amenés Pascal IOCHUM à développer les principes de bases de ses interventions.</p>
+
+                <p>Pour cette aventure sonore, ses interventions lui ont permis après des années de pratique de mieux cerner et de mieux accompagner ces personnes dont le langage parlé n'est pas privilégié.</p>
+
+                <p>C'est pour cette raison que Pascal IOCHUM souhaite aujourd'hui faire aussi un travail de transmission pour que tout ce chemin parcouru continue avec de nouveaux intervenants dans d'autres institutions aux services des personnes résidantes.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="parcours-template">
+<audio id="pageAudio" src="audio/voix.mp3" preload="auto"></audio>
+    <main>
+        <section class="parcours-content">
+            <h1>Parcours</h1>
+            
+            <div class="parcours-intro">
+                <h2>Vibrations Résonances</h2>
+                <h3>Pascal IOCHUM</h3>
+                <p class="roles">Chanteur-Comédien-Conteur-Poly-musicien</p>
+                <p class="subtitle">Formateur-Intervenant dans diverses structures liées aux handicaps</p>
+                
+                <div class="experience-summary">
+                    <p>Une expérience de 25 années au service des enfants et des institutions liées aux handicaps.</p>
+                    <p>Une grande expérience pédagogique allant de la petite enfance aux adultes et spécialisé depuis près de 20 ans auprès des personnes handicapées et autistes. Voix haute-contre et percussions, création d'espace sonore dans le but de les amener à être et faire par eux-mêmes.</p>
+                </div>
+            </div>
+
+            <div class="parcours-section">
+                <h2>Compétences professionnelles</h2>
+                <ul>
+                    <li>Intervenant : Conte / Musique / Théâtre / Percussion / Voix / Chorale / Relaxation</li>
+                    <li>Comédien, metteur en scène, directeur d'acteur : théâtre et cinéma, CS : K 965 204</li>
+                    <li>Auteur, Compositeur, Interprète, sociétaire SACEM</li>
+                    <li>Formateur en pédagogie vocale, Coaching vocal, Interprète en scène</li>
+                    <li>Bataclown théâtre, "A la recherche de son propre clown" - 4 niveaux de formation -</li>
+                    <li>Forme et dirige des groupes et des équipes (stages et formations)</li>
+                    <li>Sens de l'accueil et de l'écoute</li>
+                    <li>Formations proposées : Théâtre, Conte, Musique, Percussion, Pédagogie et Coaching vocal</li>
+                </ul>
+            </div>
+
+            <div class="parcours-section">
+                <h2>Intervenant : Conte / Théâtre / Musique "Vibrations Résonances"</h2>
+                <ul class="institutions-list">
+                    <li>ADIMC (35)</li>
+                    <li>Foyer Siloé (35)</li>
+                    <li>Ferme des Mauges (49)</li>
+                    <li>MAS L'épeau (44)</li>
+                    <li>EPMS Saint brévin (44) EPS Bel air Lejeune</li>
+                    <li>EPMS FAM Bouvron</li>
+                    <li>Le vent d'Espoir (85)</li>
+                    <li>Foyer de vie Celhaya (64) - de 1996 à 2008</li>
+                    <li>Nid marin, "Aventure et Résonance", Hendaye</li>
+                    <li>Foyer d'accueil médicalisé, Bizidéki Larceveau</li>
+                    <li>C.A.T. Biaudos</li>
+                    <li>Centre d'éducation et rééducation motrice, Ustaritz</li>
+                    <li>Centre de recherche et d'action psycho-sociale, Pau</li>
+                    <li>Responsable option théâtre, collège Eluyhar, 12 années, Hasparren</li>
+                    <li>Animateur spécialisé contes et musique, Ville de Paris, 10 ans</li>
+                    <li>Responsable de création, animation spectacle : Paris</li>
+                </ul>
+            </div>
+
+            <div class="parcours-section">
+                <h2>Auteur-Compositeur-Interprète</h2>
+                <ul>
+                    <li>2009, réalisation d'un album CD intitulé Visage, extraits sur diverses plateformes</li>
+                    <li>Réalisation d'un album CD 6 titres intitulé Ange (piano-voix)</li>
+                    <li>Sélectionné par Francis Cabrel et des professionnels du spectacle aux Rencontres d'Astaffort</li>
+                </ul>
+                
+                <p>Travail de recherche théâtral et spectacle avec Eduardo Manet, Serge Merlin, Geneviève Schwoebel, Michelle Kokosowski, Mario Gonzales, Alain Astruc, Claude Buchwald, Living Théâtre, Picolo Teatro de Milan, Odin Théâtre, Théâtre de Roumanie : Radu Penscuelescu, compagnie lorsque 5 ans –Bordeaux, compagnie de la Mandragore – Biarritz, compagnie du théâtre en équilibre – Saint Esteben, compagnie Eclectic system – Paris, compagnie Ornicar – Paris</p>
+            </div>
+
+            <div class="parcours-section">
+                <h2>Cinéma / film d'entreprise / publicité / doublage</h2>
+                <ul class="productions-list">
+                    <li>Thompson</li>
+                    <li>Digital</li>
+                    <li>Le Gan, de Patrice Leconte</li>
+                    <li>La poste, de Jean-Baptiste Mondino</li>
+                    <li>Post mortem, de Frédéric Bourgade</li>
+                    <li>Sauvés par le gong, série Giga, A2</li>
+                    <li>Les évadés, de Richard Manuel</li>
+                    <li>L 627, de Bertrand Tavernier</li>
+                    <li>Les secrets du Pr. Apfelglück, de Thierry Lhermitte</li>
+                    <li>La Chauve-Souris, de Christian Lallier</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="photos-template">
+<audio id="pageAudio" src="audio/voix.mp3" preload="auto"></audio>
+    <main>
+        <section class="photos-content">
+                        <div class="photos-description">
+                <p>Photos prises lors d'interventions à la MAS de l'Epeau à Bouguenais (44).</p>
+                <p class="thanks">Un grand merci aux familles, à Laurence et à Audrey.</p>
+            </div>
+            <div class="carousel">
+                <button class="carousel-button prev" aria-label="Image précédente">❮</button>
+                <button class="carousel-button next" aria-label="Image suivante">❯</button>
+                <div class="carousel-container" id="carousel">
+                    <!-- Les images seront injectées ici -->
+                </div>
+                <div class="carousel-dots" id="carousel-dots">
+                    <!-- Les points seront injectés ici -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="temoignages-template">
+<audio id="pageAudio" src="audio/voix.mp3" preload="auto"></audio>
+    <main>
+        <section class="temoignages-content">
+            <div class="temoignages-intro">
+                <h1>Témoignages</h1>
+                <p>Découvrez les retours d'expérience des personnes ayant participé aux ateliers Vibrations Résonances.</p>
+            </div>
+
+            <div class="temoignages-grid">
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Etienne P.</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Isabelle B.</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Geneviève</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Gwenaelle L.</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Observations Isabelle B.</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Clara</button>
+                </div>
+
+                <div class="temoignage-card">
+                    <button class="temoignage-btn">Elodie (Stagiaire)</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script type="text/x-template" id="vibrations-resonances-template">
+<audio id="homeAudio" src="audio/home.mp3" preload="auto"></audio>
+    <main>
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>Vibrations Résonances</h2>
+                <p>"C'est une activité Artistique Musicale, Vocale, Gestuelle<br>
+                de Créations Sonores éphémères"</p>
+                <p class="quote">"Laisser venir l'être profond pour stimuler l'envie de faire"</p>
+                <p>Ce site a pour but de mieux faire connaitre l'activité Vibrations Résonances créée par Pascal IOCHUM.</p>
+            </div>
+            <div class="slideshow" id="residentsSlideshow">
+                <!-- Les images seront injectées dynamiquement par JavaScript -->
+            </div>
+        </section>
+        <section class="presentation-section">
+            <div class="text-block">
+                <p>Je souhaite la diffuser et continuer de la transmettre en proposant des interventions aux institutions spécialisées, afin de permettre aux participants de vivre une aventure sonore hors du commun, les amenant par l'émergence de leur être profond à une envie de faire émotionnelle et évolutive dans le monde Ouvert des Vibrations Résonances.</p>
+                <p>Ce que je recherche n'est pas seulement la distraction mais plutôt des voies, des formes de langages pour aller à la rencontre de chaque personne.</p>
+
+                <p>Le but ultime de cette activité est d'amener chacun des résidants à s'exprimer de lui-même et de se proposer de faire lui-même.</p>
+
+                <p>Mon travail est d'ouvrir ce chemin de communication des deux mondes :</p>
+
+                <p>Du monde dit normal au monde dit... différent, sans susciter l'apprentissage, ni le faire pour le faire mais plutôt laisser venir l'envie de faire pour être.</p>
+
+                <p>Alors dans l'indicible, dans l'infinitésimale, les deux mondes dans l'ici et maintenant peuvent communiquer et jouer ensemble grâce à ce mode vibratoire des sons, de la voix chantée et parlée, des sens, des vibrations et des résonances.</p>
+
+                <p>Et si nous sommes à leur écoute, nous apprenons beaucoup d'eux, ensemble dans l'échange.</p>
+
+                <p>Cette aventure en recherche se conçoit dans la continuité pour leur donner le temps de leur propre développement et créer des passerelles dans l'ici et maintenant.</p>
+
+                <p>Alors peu à peu, ce présent s'inscrit plus concrètement et plus largement dans le temps parce qu'ils ont avec leurs moyens, toucher à l'envie de faire pour eux, pour leur être.</p>
+            </div>
+        </section>
+        <section class="artist-section">
+            <h2>L'Artiste Pascal IOCHUM, c'est aussi de la chanson pour les grands et les petits :</h2>
+            <p class="site-link">site officiel <a href="pascal-guillaume.html" target="_blank" rel="noopener noreferrer">Pascal GUILLAUME</a></p>
+        </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vibrations Résonances. Tous droits réservés.</p>
+    </footer>
+  </script>
+  <script src="js/main.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
